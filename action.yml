@@ -1,0 +1,20 @@
+name: Code Review GitHub Action
+author: vipinkrajput
+description: Github action for assigning reviewers, requesting reviews automatically on pull request
+
+inputs:
+  reviewers:
+    description: 'List of reviewers'
+    required: true
+
+outputs:
+  message:
+    description: 'Greeting Message'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ github.event.repository.name }}
+    - ${{ inputs.reviewers }}
+  
