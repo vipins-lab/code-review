@@ -10,12 +10,7 @@ inputs:
   repository:
     description: 'Repository name'
     required: false
-    default: ${{ github.event.repository.name }}   
-
-  organization:
-    description: 'Organization name'
-    required: false
-    default: ${{ github.event.organization.name }}    
+    default: ${{ github.repository }}     
 
 outputs:
   message:
@@ -25,7 +20,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.organization }}
     - ${{ inputs.repository }}
     - ${{ inputs.reviewers }}
   
