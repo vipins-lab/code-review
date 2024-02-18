@@ -9,8 +9,8 @@ inputs:
   
   repository:
     description: 'Repository name'
-    required: true
-    default: ${{ github.event.repository.name }}
+    required: false
+    default: ${{ github.event.repository.name }}    
 
 outputs:
   message:
