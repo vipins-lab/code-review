@@ -20,6 +20,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ input.repository }}
+    - ${{ inputs.repository }}
     - ${{ inputs.reviewers }}
   
