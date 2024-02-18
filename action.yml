@@ -6,6 +6,11 @@ inputs:
   reviewers:
     description: 'List of reviewers'
     required: true
+  
+  repository:
+    description: 'Repository name'
+    required: true
+    default: ${{ github.event.repository.name }}
 
 outputs:
   message:
@@ -15,6 +20,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ github.event.repository.name }}
+    - ${{ input.repository }}
     - ${{ inputs.reviewers }}
   
