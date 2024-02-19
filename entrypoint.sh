@@ -35,5 +35,5 @@ echo $pulls | jq -c '.[]' | while read pull; do
 echo "| "
 echo "| "
 done
-echo "+===============================================================================+"
+echo "+================================================================================+"
 echo "message=Reviewers assinged to the Pull Requests." >> $GITHUB_OUTPUT
