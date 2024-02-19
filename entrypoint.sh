@@ -1,21 +1,26 @@
 #!/bin/sh -l
 
+: '
+********************
+Author: vipinkrajput
+********************
+List Pulls
+URL: https://api.github.com/repos/vipins-lab/workflows/pulls
+Request Reviewers: https://api.github.com/repos/vipins-lab/workflows/pulls/${pull_number}/requested_reviewers
+'
+
 repository="$1"
 users="$2"
 reviewers_json="{\"reviewers\":[\"${users}\"]}"
 echo $reviewers_json
-echo "On  repository https://github.com/${repository}, reviewer = [${users}]"
+echo "On  repository https://github.com/${repository} reviewer = [${users}]"
 
 api_url="https://api.github.com"
 
-# Author: vipinkrajput
-# List Pulls
-# URL: https://api.github.com/repos/vipins-lab/workflows/pulls
-# Request Reviewers: https://api.github.com/repos/vipins-lab/workflows/pulls/${pull_number}/requested_reviewers
-
 pulls=$(curl -sSl --request GET ${api_url}/repos/${repository}/pulls -H "Authorization: Bearer $GITHUB_TOKEN")
 echo "================================================================================="
-echo "+ Author: vipinkrajput"
+echo "+ "
+echo $pulls
 echo $pulls | jq -c '.[]' | while read pull; do
     pr_url=$(echo "$pull" | jq .url | tr -d '"')
     pull_number=$(echo "$pull" | jq .number | tr -d '"')
