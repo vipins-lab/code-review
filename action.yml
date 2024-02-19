@@ -4,7 +4,7 @@ description: Github action for assigning reviewers, requesting reviews automatic
 
 inputs:
   reviewers:
-    description: 'List of reviewers'
+    description: 'Comma separated list of reviewers'
     required: true
   
   repository:

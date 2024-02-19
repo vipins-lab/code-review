@@ -11,7 +11,8 @@ Request Reviewers: https://api.github.com/repos/vipins-lab/workflows/pulls/${pul
 
 repository="$1"
 users="$2"
-reviewers_json="{\"reviewers\":[\"${users}\"]}"
+# reviewers_json="{\"reviewers\":[\"${users}\"]}"
+reviewers_json=$(jq -n -c -M --arg s "$users" '{reviewers: ($s|split(","))}')
 echo $reviewers_json
 echo "On  repository https://github.com/${repository} reviewer = [${users}]"
 
