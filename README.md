@@ -17,7 +17,7 @@ Workflows GitHub action for assigning reviewers, requesting reviews automaticall
 This example auto-assigns reviewers to pull requests.
 
 ```yml
-name: Auto Assingment of reviewers
+name: Auto assignment of reviewers
 
 on:
   workflow_dispatch:
