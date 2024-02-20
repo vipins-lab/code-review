@@ -7,7 +7,8 @@ Workflows github action for assigning reviewers, requesting reviews automaticall
 
 | Parameter                   | Type    | Required                             | Default                     | Description                                                                                                                                                                                                                                                                                |
 | --------------------------- | ------- | ------------------------------------ | -------                     | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `reviewers`                 | String  | Yes                                  | n/a                         | Comma separated list of user names. Pull Request Review will be requested to those users.                                                                                                                 | `repository`                | String  | No                                   | `${{ github.repository }}`  | Repository Name as `<orgname>/<repository_name>`, default is evalulated from github context `github.repository`                                                                                                                                              |
+| `reviewers`                 | String  | Yes                                  | n/a                         | Comma separated list of user names. Pull Request Review will be requested to those users.                                                                                                                                                                                                  |
+| `repository`                | String  | No                                   | `${{ github.repository }}`  | Repository Name as `<orgname>/<repository_name>`, default is evalulated from github context `github.repository`                                                                                                                                                                            |
 
 ## Examples
 
@@ -16,7 +17,7 @@ Workflows github action for assigning reviewers, requesting reviews automaticall
 This example auto-assigns reviewers to pull requests.
 
 ```yml
-name: Auto Assingment of Reviewer
+name: Auto Assingment of reviewers
 
 on:
   workflow_dispatch:
