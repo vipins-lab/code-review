@@ -1,4 +1,4 @@
-# GitHub Action to Assign reviewer automatically to pull requests.
+# GitHub Action to Assign reviewer automatically to pull requests
 Workflows GitHub action for assigning reviewers, requesting reviews automatically on pull request.
 [![Lint Code Base](https://github.com/vipins-lab/code-review/actions/workflows/super-linter.yml/badge.svg?branch=main)](https://github.com/vipins-lab/code-review/actions/workflows/super-linter.yml)
 
