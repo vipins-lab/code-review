@@ -19,4 +19,4 @@ pip-compile -q
 pip-sync -q
 python3 reviewer-auto-assignment.py "$1" "$2"
 
-echo "message=Reviewers assinged to the Pull Requests." >> $GITHUB_OUTPUT
+echo "message=Reviewers assinged to the Pull Requests." >> "$GITHUB_OUTPUT"
