@@ -1,5 +1,5 @@
-# code-review github action
-Workflows github action for assigning reviewers, requesting reviews automatically on pull request.
+# GitHub Action to Assign reviewer automatically to pull requests.
+Workflows GitHub action for assigning reviewers, requesting reviews automatically on pull request.
 [![Lint Code Base](https://github.com/vipins-lab/code-review/actions/workflows/super-linter.yml/badge.svg?branch=main)](https://github.com/vipins-lab/code-review/actions/workflows/super-linter.yml)
 
 
@@ -7,8 +7,8 @@ Workflows github action for assigning reviewers, requesting reviews automaticall
 
 | Parameter                   | Type    | Required                             | Default                     | Description                                                                                                                                                                                                                                                                                |
 | --------------------------- | ------- | ------------------------------------ | -------                     | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `reviewers`                 | String  | Yes                                  | n/a                         | Comma separated list of user names. Pull Request Review will be requested to those users.                                                                                                                                                                                                  |
-| `repository`                | String  | No                                   | `${{ github.repository }}`  | Repository Name as `<orgname>/<repository_name>`, default is evalulated from github context `github.repository`                                                                                                                                                                            |
+| `reviewers`                 | String  | Yes                                  | n/a                         | Comma separated list of usernames. Pull Request Review will be requested to those users.                                                                                                                                                                                                   |
+| `repository`                | String  | No                                   | `${{ github.repository }}`  | Repository Name as `<orgname>/<repository_name>`, default is evalulated from GitHub context `github.repository`                                                                                                                                                                            |
 
 ## Examples
 
