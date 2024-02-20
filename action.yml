@@ -1,6 +1,6 @@
-name: Code Review GitHub Action
+name: Vipin Pull Request Management GitHub Action
 author: vipinkrajput
-description: Github action for assigning reviewers, requesting reviews automatically on pull request
+description: Github action for Pull Request management (Auto assignment of reviewers, requesting reviews on pull request)
 
 inputs:
   reviewers:
@@ -23,3 +23,6 @@ runs:
     - ${{ inputs.repository }}
     - ${{ inputs.reviewers }}
   
+branding:
+  icon: "git-pull-request"
+  color: "purple"
